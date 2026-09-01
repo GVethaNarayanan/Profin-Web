@@ -9,34 +9,34 @@
 
 :root {
   /* Backgrounds */
-  --bg-deep: #05070B;
-  --bg-primary: #090D14;
-  --bg-surface: #0E141D;
-  --bg-elevated: #131B27;
+  --bg-deep: #050403;
+  --bg-primary: #0A0806;
+  --bg-surface: #14110E;
+  --bg-elevated: #1F1A15;
 
   /* Glass */
-  --glass: rgba(255, 255, 255, 0.035);
-  --glass-hover: rgba(255, 255, 255, 0.06);
-  --glass-active: rgba(255, 255, 255, 0.08);
+  --glass: rgba(212, 175, 55, 0.035);
+  --glass-hover: rgba(212, 175, 55, 0.06);
+  --glass-active: rgba(212, 175, 55, 0.08);
 
   /* Borders */
-  --border: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(255, 255, 255, 0.14);
-  --border-active: rgba(139, 124, 255, 0.3);
+  --border: rgba(212, 175, 55, 0.12);
+  --border-hover: rgba(212, 175, 55, 0.25);
+  --border-active: rgba(212, 175, 55, 0.4);
 
   /* Text */
-  --text-primary: #F5F7FA;
-  --text-secondary: #B8C4D4;
-  --text-muted: #778397;
-  --text-dim: #4A5568;
+  --text-primary: #FDFBF7;
+  --text-secondary: #D4C9A8;
+  --text-muted: #8A7E5D;
+  --text-dim: #544C36;
 
   /* Brand */
-  --violet: #8B7CFF;
-  --violet-glow: rgba(139, 124, 255, 0.15);
-  --violet-bright: #A599FF;
-  --cyan: #39D8FF;
-  --cyan-glow: rgba(57, 216, 255, 0.15);
-  --cyan-bright: #6AE4FF;
+  --violet: #D4AF37;
+  --violet-glow: rgba(212, 175, 55, 0.15);
+  --violet-bright: #F9E596;
+  --cyan: #E5C158;
+  --cyan-glow: rgba(229, 193, 88, 0.15);
+  --cyan-bright: #FFF2B2;
 
   /* Financial */
   --positive: #38E6A5;
@@ -108,14 +108,18 @@ html {
 body {
   background: var(--bg-deep);
   color: var(--text-primary);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6, .font-serif, .gradient-text-violet, .gradient-text-cyan {
+  font-family: 'Playfair Display', serif;
+}
+
 ::selection {
-  background: rgba(139, 124, 255, 0.3);
+  background: rgba(212, 175, 55, 0.3);
   color: #fff;
 }
 
@@ -512,9 +516,9 @@ body {
   padding: 0;
   transition: margin-left 0.3s var(--ease-out-expo);
   background-image: 
-    radial-gradient(circle at 50% 0%, rgba(139, 124, 255, 0.06) 0%, transparent 60%),
-    radial-gradient(circle at 85% 35%, rgba(57, 216, 255, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 15% 75%, rgba(255, 92, 114, 0.04) 0%, transparent 50%);
+    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 85% 35%, rgba(249, 229, 150, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 15% 75%, rgba(229, 193, 88, 0.04) 0%, transparent 50%);
 }
 
 .spidey-watermark-card {
