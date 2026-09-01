@@ -16,6 +16,7 @@ import type {
   PortfolioHolding,
   Scenario,
   Decision,
+  DecisionAction,
   TraceStep,
   WebNode,
   WebConnection,
@@ -413,7 +414,7 @@ export const mockPerformanceMetrics: PerformanceMetric[] = [
 
 // ─── Dynamic Stock Lookup Generator ──────
 
-const KNOWN_STOCKS: Record<string, { name: string; price: number; change: number; changePercent: number; action: string; confidence: number; reasoning: string; target: number; currency: string }> = {
+const KNOWN_STOCKS: Record<string, { name: string; price: number; change: number; changePercent: number; action: DecisionAction; confidence: number; reasoning: string; target: number; currency: string }> = {
   TCS: {
     name: 'Tata Consultancy Services',
     price: 3580.00,
