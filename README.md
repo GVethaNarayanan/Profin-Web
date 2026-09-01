@@ -1,201 +1,253 @@
-# AI Hedge Fund
+# 🕸️ PROFIN WEB — Living Financial Intelligence Platform
 
-A multi-agent investment analysis system where specialized AI agents collaborate to analyze stocks and make investment decisions. Built with **LangGraph**, **LangChain**, **Google Gemini**, **FastAPI**, and **Next.js**.
+> *“Connect the signals. Understand the decision.”*
 
-## How It Works
+[![Hackathon](https://img.shields.io/badge/HACKVERSE-INTO_THE_WEB-8B7CFF?style=for-the-badge)](https://github.com/SRIKRISH-S/hedge-web-ai)
+[![Next.js](https://img.shields.io/badge/Next.js-15.5-000000?style=for-the-badge&logo=nextdotjs)](https://nextjs.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com)
+[![LangGraph](https://img.shields.io/badge/LangGraph-Multi_Agent-39D8FF?style=for-the-badge)](https://www.langchain.com/langgraph)
+[![Google Gemini](https://img.shields.io/badge/Google_Gemini-1.5_Flash-4285F4?style=for-the-badge&logo=google)](https://aistudio.google.com)
+[![License](https://img.shields.io/badge/License-MIT-38E6A5?style=for-the-badge)](LICENSE)
 
-Five AI agents work together in a LangGraph workflow:
+---
 
-1. **Fundamentals Agent** — Analyzes SEC filings (10-K, 10-Q) and company financials using RAG
-2. **Sentiment Agent** — Evaluates news sentiment and market mood using Tavily search
-3. **Technical Agent** — Computes and interprets technical indicators (RSI, MACD, Bollinger Bands)
-4. **Risk Manager** — Aggregates all reports and evaluates risk/reward
-5. **Portfolio Manager** — Makes the final BUY / HOLD / SELL decision
+## 🌟 Executive Overview
 
-The three analyst agents run **in parallel**, feed into the Risk Manager, who then passes to the Portfolio Manager for the final call.
+**PROFIN WEB** is an institutional-grade, multi-agent AI financial intelligence platform built for **HACKVERSE: INTO THE WEB**.
 
-## Tech Stack
+Rather than a static grid of charts, PROFIN WEB models financial market dynamics as a **living, 3D holographic neural web**. Every glowing node, traveling energy pulse, and tension line visualizes real-time relationships between market signals, SEC filings, sentiment disclosures, technical indicators, portfolio risk, and multi-agent AI reasoning.
 
-| Layer | Technology |
-|---|---|
-| LLM | Google Gemini (free) — swappable to OpenAI, Groq |
-| Agent Framework | LangGraph + LangChain |
-| RAG | ChromaDB + SEC EDGAR filings |
-| Backend | FastAPI + WebSocket |
-| Frontend | Next.js + Tailwind CSS + Recharts |
-| Database | SQLite (dev) / PostgreSQL (prod) |
-| Tracing | LangSmith (optional) |
-| Deployment | Vercel (frontend) + Render (backend) |
+---
 
-## Quick Start
+## ✨ Core Features & Key Innovations
+
+### 1. 🕸️ 3D Holographic Intelligence Web (Canvas 3D Engine)
+- Zero-dependency, high-performance **HTML5 Canvas 2D/3D projection engine** running at 60fps.
+- **Interactive 3D Mouse Parallax Tilt**: Moving your cursor orbits the intelligence web in 3D perspective (`fov = 400`).
+- **Depth-Sorted Nodes & Energy Particles**: Metallic nodes float with radial glow auras, depth blur, and traveling signal pulses along active connections.
+
+### 2. 🕷️ Spidey Sense Market Anomaly Radar Engine
+- **Threat & Opportunity Radar**: Real-time detection of signal conflicts (e.g. Technical ↔ Sentiment disagreement) and portfolio concentration spikes (`32% → 41%`).
+- **3D Radar Wave Sweep**: Continuous radial wave pulse animating outward across 3D web strands.
+- **Spider-Man Action Watermark**: Geometric Spider Web Shield and cyber-mesh backdrop watermarks.
+
+### 3. 🧠 Multi-Agent Orchestration (LangGraph + LangChain)
+- **Technical Analyst**: RSI, MACD, EMA crossover, and Bollinger Bands calculation.
+- **Fundamental Analyst**: RAG retrieval over SEC 10-K/10-Q filings using **ChromaDB**.
+- **Sentiment Analyst**: Live news & market mood aggregation powered by **Tavily Search**.
+- **Risk Manager**: Portfolio concentration thresholds, beta risk, and volatility assessment.
+- **Portfolio Manager**: Final synthesis generating actionable `BUY`, `HOLD`, or `SELL` decisions with confidence rings (`78%`).
+
+### 4. 🧪 What-If Scenario Simulator & Portfolio Stress Testing
+- Interactive position simulation with asset, action (`BUY`), and custom amount inputs.
+- Draggable **BEAR ↔ BULL** market scenario slider interpolating projected portfolio returns (`+8.2%` vs `-7.6%`).
+- Portfolio impact matrix detailing Risk Score (`42 → 49`) and Sector Concentration (`32% → 41%`).
+
+### 5. 🧬 Investor Digital Twin & Personalized Financial DNA
+- Customizable risk tolerance (`68%`), loss sensitivity (`74%`), and diversification target (`55%`).
+- Multi-agent AI reasoning dynamically adapts its conviction threshold to match the investor's digital twin.
+
+### 6. 💻 Institutional Command Center UI (9 Working Views)
+- **Top Primary Search Bar**: Instant stock ticker analysis (`INFY`, `TCS`, `RELIANCE`, `AAPL`, `NVDA`).
+- **Command Palette (`Ctrl+K` / `⌘K`)**: Instant search overlay across all platform views.
+- **9 Dedicated Routes**: `Dashboard (/)`, `Markets (/markets)`, `Portfolio (/portfolio)`, `Research (/analysis)`, `What-If (/whatif)`, `Evidence (/evidence)`, `Investor (/investor)`, `Settings (/settings)`, `System Status (/status)`.
+
+---
+
+## 📐 System Architecture
+
+```
+                                 ┌─────────────────────────────────────────┐
+                                 │           PROFIN WEB FRONTEND           │
+                                 │   (Next.js 15 + 3D Holographic Canvas)  │
+                                 └────────────────────┬────────────────────┘
+                                                      │ WebSocket / REST
+                                                      ▼
+                                 ┌─────────────────────────────────────────┐
+                                 │         FASTAPI / LANGGRAPH CORE        │
+                                 └────────────────────┬────────────────────┘
+                                                      │
+          ┌──────────────────────────┬────────────────┴──────────────────────────┬──────────────────────────┐
+          ▼                          ▼                                           ▼                          ▼
+┌──────────────────┐       ┌──────────────────┐                        ┌──────────────────┐       ┌──────────────────┐
+│ TECHNICAL AGENT  │       │ FUNDAMENTALS AGENT│                        │ SENTIMENT AGENT  │       │   RISK MANAGER   │
+│ (RSI, MACD, BB)  │       │ (SEC EDGAR RAG)  │                        │ (Tavily Search)  │       │ (Portfolio Risk) │
+└─────────┬────────┘       └─────────┬────────┘                        └─────────┬────────┘       └─────────┬────────┘
+          │                          │                                           │                          │
+          └──────────────────────────┴────────────────┬──────────────────────────┴──────────────────────────┘
+                                                      ▼
+                                       ┌───────────────────────────┐
+                                       │ PORTFOLIO MANAGER ENGINE  │
+                                       │  (BUY / HOLD / SELL)      │
+                                       └───────────────────────────┘
+```
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend Core** | Next.js 15 (App Router), React 19, TypeScript |
+| **Styling & Design** | Vanilla CSS Tokens, Tailwind CSS, Lucide Icons, Custom Keyframe Animations |
+| **Visualizations** | HTML5 Canvas 2D/3D Engine, SVG Radial Charts |
+| **Backend Core** | Python 3.11+, FastAPI, Uvicorn, WebSockets |
+| **AI & Agents** | LangGraph, LangChain, Google Gemini 1.5 Flash (Swappable to OpenAI / Groq) |
+| **RAG & Search** | ChromaDB Vector Store, SEC EDGAR Filings, Tavily Search API |
+| **Database** | SQLite + aiosqlite (Async ORM) |
+
+---
+
+## 🚀 Quick Start Guide
 
 ### Prerequisites
+- **Node.js**: v18.0.0 or higher
+- **Python**: v3.11 or higher
+- **Git**
 
-- Python 3.11+
-- Node.js 18+
-- API keys (all free tiers):
-  - [Google AI Studio](https://aistudio.google.com/apikey) — Gemini API key
-  - [Alpha Vantage](https://www.alphavantage.co/support/#api-key) — Financial data
-  - [Tavily](https://tavily.com/) — News search
-  - [Finnhub](https://finnhub.io/) — Stock quotes (optional fallback)
+---
 
-### 1. Clone & Setup Backend
+### 1. Clone Repository
 
 ```bash
-cd ai-hedge-fund/backend
-
-# Create virtual environment
-python -m venv venv
-venv\Scripts\activate      # Windows
-# source venv/bin/activate  # Mac/Linux
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Configure environment
-copy .env.example .env     # Windows
-# cp .env.example .env     # Mac/Linux
+git clone https://github.com/SRIKRISH-S/hedge-web-ai.git
+cd hedge-web-ai
 ```
 
-Edit `backend/.env` with your API keys:
+---
+
+### 2. Configure Backend (`backend/.env`)
+
+Create `backend/.env` (or copy `.env.example`):
+
+```bash
+cd backend
+copy .env.example .env
+```
+
+Add your API keys to `backend/.env`:
 
 ```env
+# LLM Provider (gemini | openai | groq)
 LLM_PROVIDER=gemini
-GOOGLE_API_KEY=your_key_here
-ALPHA_VANTAGE_API_KEY=your_key_here
-TAVILY_API_KEY=your_key_here
+
+# Google Gemini API Key (Free from https://aistudio.google.com/)
+GOOGLE_API_KEY=your_gemini_api_key_here
+
+# SEC EDGAR User Agent (Your email address)
+SEC_EDGAR_USER_AGENT=your_email@example.com
+
+# Tavily Search API Key (Free from https://tavily.com/)
+TAVILY_API_KEY=your_tavily_api_key_here
+
+# App Settings
+DATABASE_URL=sqlite+aiosqlite:///./hedge_fund.db
+CORS_ORIGINS=http://localhost:3000,http://localhost:3001,http://localhost:8000
 ```
 
-Start the backend:
+Install backend dependencies and run server:
 
 ```bash
-uvicorn app.main:app --reload --port 8000
+pip install -r requirements.txt
+python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-### 2. Setup Frontend
+---
+
+### 3. Configure Frontend (`frontend/.env.local`)
+
+Create `frontend/.env.local`:
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000
+NEXT_PUBLIC_WS_URL=ws://localhost:8000/ws/analysis
+```
+
+Install frontend dependencies and start dev server:
 
 ```bash
-cd ai-hedge-fund/frontend
-
+cd ../frontend
 npm install
-
-# Configure environment
-copy .env.example .env.local   # Windows
-# cp .env.example .env.local   # Mac/Linux
-```
-
-Start the frontend:
-
-```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open **`http://localhost:3000`** in your browser!
 
-### 3. Run with Docker (Alternative)
+---
 
-```bash
-cd ai-hedge-fund
-
-# Copy and edit backend env file first
-copy backend\.env.example backend\.env
-
-docker-compose up --build
-```
-
-## API Endpoints
+## 📡 REST API & WebSocket Specifications
 
 | Method | Endpoint | Description |
-|---|---|---|
-| POST | `/api/analyze/{ticker}` | Run full multi-agent analysis |
-| GET | `/api/analyses` | List recent analyses |
-| GET | `/api/analyses/{id}` | Get specific analysis |
-| GET | `/api/portfolio` | Get portfolio holdings |
-| GET | `/api/health` | Health check |
-| WS | `/ws/analysis` | Real-time agent activity stream |
+| :--- | :--- | :--- |
+| `POST` | `/api/analyze/{ticker}` | Trigger full multi-agent analysis |
+| `GET` | `/api/analyses` | List recent analysis history |
+| `GET` | `/api/analyses/{id}` | Retrieve detailed analysis report |
+| `GET` | `/api/portfolio` | Get active portfolio holdings & exposure |
+| `GET` | `/api/health` | Service health status check |
+| `WS` | `/ws/analysis` | Live streaming WebSocket agent execution |
 
-## Deployment
+---
 
-### Backend → Render
-
-1. Push to GitHub
-2. Create a new **Web Service** on [Render](https://render.com)
-3. Connect your repo, set root directory to `backend`
-4. Build command: `pip install -r requirements.txt`
-5. Start command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-6. Add environment variables from `.env`
-
-### Frontend → Vercel
-
-1. Import your repo on [Vercel](https://vercel.com)
-2. Set root directory to `frontend`
-3. Add environment variable:
-   - `NEXT_PUBLIC_API_URL` = your Render backend URL
-   - `NEXT_PUBLIC_WS_URL` = your Render WebSocket URL (use `wss://`)
-
-## Switching LLM Providers
-
-Change `LLM_PROVIDER` in your `.env`:
-
-```env
-# Google Gemini (default, free)
-LLM_PROVIDER=gemini
-GOOGLE_API_KEY=your_key
-
-# OpenAI
-LLM_PROVIDER=openai
-OPENAI_API_KEY=your_key
-
-# Groq (free, fast)
-LLM_PROVIDER=groq
-GROQ_API_KEY=your_key
-```
-
-## Optional: LangSmith Tracing
-
-Enable full agent tracing:
-
-```env
-LANGSMITH_ENABLED=true
-LANGSMITH_API_KEY=your_langsmith_key
-LANGCHAIN_PROJECT=ai-hedge-fund
-```
-
-View traces at [smith.langchain.com](https://smith.langchain.com).
-
-## Project Structure
+## 📂 Project Directory Architecture
 
 ```
-ai-hedge-fund/
+hedge-web-ai/
 ├── backend/
 │   ├── app/
-│   │   ├── agents/           # LangGraph agent definitions
-│   │   │   ├── state.py      # Shared state schema
-│   │   │   ├── graph.py      # LangGraph workflow
-│   │   │   ├── fundamentals.py
-│   │   │   ├── sentiment.py
-│   │   │   ├── technical.py
-│   │   │   ├── risk_manager.py
-│   │   │   └── portfolio_manager.py
-│   │   ├── tools/            # Agent tool functions
-│   │   ├── rag/              # RAG pipeline for SEC filings
-│   │   ├── api/              # FastAPI routes + WebSocket
-│   │   ├── db/               # Database models
-│   │   ├── config.py         # Configuration
-│   │   └── main.py           # App entry point
-│   ├── requirements.txt
-│   └── Dockerfile
+│   │   ├── agents/            # LangGraph multi-agent workflow
+│   │   │   ├── graph.py       # Graph execution pipeline
+│   │   │   ├── state.py       # Shared state definitions
+│   │   │   ├── fundamentals.py# SEC filing RAG analyst
+│   │   │   ├── technical.py   # Indicator calculator
+│   │   │   ├── sentiment.py   # News & social sentiment
+│   │   │   ├── risk_manager.py# Risk aggregator
+│   │   │   └── portfolio_manager.py # Decision synthesizer
+│   │   ├── api/               # FastAPI REST & WebSocket endpoints
+│   │   ├── rag/               # ChromaDB SEC filing vector store
+│   │   ├── db/                # Async SQLite models
+│   │   └── main.py            # FastAPI entry point
+│   ├── .env.example
+│   └── requirements.txt
 ├── frontend/
 │   ├── src/
-│   │   ├── app/              # Next.js pages
-│   │   ├── components/       # React components
-│   │   └── lib/              # API client + WebSocket
+│   │   ├── app/               # Next.js App Router pages
+│   │   │   ├── page.tsx       # Main 3D Holographic Dashboard
+│   │   │   ├── markets/       # Markets Intelligence Hub
+│   │   │   ├── portfolio/     # Holdings & Exposure
+│   │   │   ├── analysis/      # Research & History
+│   │   │   ├── whatif/        # Decision Simulator
+│   │   │   ├── evidence/      # Evidence Graph & RAG Explorer
+│   │   │   ├── investor/      # Financial DNA Twin
+│   │   │   ├── settings/      # System Settings
+│   │   │   └── status/        # System Telemetry
+│   │   ├── components/profin/ # Custom PROFIN UI Components
+│   │   │   ├── IntelligenceWeb.tsx  # 3D Canvas Projection Engine
+│   │   │   ├── HeroSection.tsx      # Above-the-fold Decision Card
+│   │   │   ├── AgentNetwork.tsx     # Live Agent Cards
+│   │   │   ├── ReasoningStream.tsx  # Terminal Log Stream
+│   │   │   ├── DecisionTrace.tsx    # 8-Stage Timeline
+│   │   │   ├── WhatIfSimulator.tsx  # Scenario Controller
+│   │   │   └── CommandPalette.tsx   # Ctrl+K Search Overlay
+│   │   └── lib/
+│   │       ├── mockData.ts    # Centralized data adapter
+│   │       ├── types.ts       # Master TypeScript interfaces
+│   │       └── websocket.ts   # WebSocket client listener
 │   ├── package.json
-│   └── Dockerfile
+│   └── tailwind.config.ts
 ├── docker-compose.yml
 └── README.md
 ```
 
-## License
+---
 
-MIT
+## 🏆 Hackathon Details
+
+- **Hackathon**: `HACKVERSE: INTO THE WEB`
+- **Team Repository**: `https://github.com/SRIKRISH-S/hedge-web-ai`
+- **Author**: SRIKRISH-S
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**. See `LICENSE` for details.
