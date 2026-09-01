@@ -26,6 +26,15 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen antialiased" style={{ background: "var(--bg-deep)" }}>
+        {/* Background Spider Web Pattern */}
+        <div className="spider-web-bg" />
+
+        {/* Hanging Spider Animation */}
+        <div className="hanging-spider-container">
+          <div className="spider-thread"></div>
+          <div className="spider-icon">🕷️</div>
+        </div>
+
         {/* Sidebar Navigation */}
         <Sidebar />
 

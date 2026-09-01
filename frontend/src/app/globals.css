@@ -606,3 +606,67 @@ body {
   overflow-y: auto;
   box-shadow: -20px 0 60px rgba(0, 0, 0, 0.5);
 }
+
+/* ══════════════════════════════════════════
+   Spider & Web Effects
+   ══════════════════════════════════════════ */
+
+.spider-web-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image: 
+    radial-gradient(circle at 100% 0%, transparent 20%, rgba(255, 255, 255, 0.03) 21%, transparent 22%),
+    radial-gradient(circle at 100% 0%, transparent 40%, rgba(255, 255, 255, 0.03) 41%, transparent 42%),
+    radial-gradient(circle at 100% 0%, transparent 60%, rgba(255, 255, 255, 0.03) 61%, transparent 62%),
+    radial-gradient(circle at 100% 0%, transparent 80%, rgba(255, 255, 255, 0.02) 81%, transparent 82%),
+    linear-gradient(45deg, transparent 49.5%, rgba(255,255,255,0.02) 50%, transparent 50.5%),
+    linear-gradient(20deg, transparent 49.5%, rgba(255,255,255,0.02) 50%, transparent 50.5%),
+    linear-gradient(70deg, transparent 49.5%, rgba(255,255,255,0.02) 50%, transparent 50.5%);
+  background-size: 100% 100%;
+  background-position: top right;
+  opacity: 0.6;
+}
+
+.hanging-spider-container {
+  position: fixed;
+  top: -150px;
+  right: 8%;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  animation: drop-spider 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.spider-thread {
+  width: 1px;
+  height: 250px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3));
+}
+
+.spider-icon {
+  font-size: 28px;
+  transform: rotate(180deg);
+  animation: swing-spider 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(139, 124, 255, 0.6));
+}
+
+@keyframes drop-spider {
+  0% { transform: translateY(0); }
+  15% { transform: translateY(200px); }
+  20% { transform: translateY(180px); }
+  35% { transform: translateY(190px); }
+  50% { transform: translateY(80px); }
+  65% { transform: translateY(100px); }
+  85% { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes swing-spider {
+  0%, 100% { transform: rotate(172deg); }
+  50% { transform: rotate(188deg); }
+}
+
