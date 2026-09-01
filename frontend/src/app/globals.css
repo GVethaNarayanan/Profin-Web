@@ -505,6 +505,8 @@ body {
    ══════════════════════════════════════════ */
 
 .profin-page {
+  position: relative;
+  z-index: 1;
   margin-left: var(--sidebar-width);
   min-height: 100vh;
   padding: 0;
@@ -611,22 +613,30 @@ body {
    Spider & Web Effects
    ══════════════════════════════════════════ */
 
-.spider-web-bg {
+.spider-web-watermark {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: -1;
-  background-image: 
-    radial-gradient(circle at 100% 0%, transparent 20%, rgba(255, 255, 255, 0.03) 21%, transparent 22%),
-    radial-gradient(circle at 100% 0%, transparent 40%, rgba(255, 255, 255, 0.03) 41%, transparent 42%),
-    radial-gradient(circle at 100% 0%, transparent 60%, rgba(255, 255, 255, 0.03) 61%, transparent 62%),
-    radial-gradient(circle at 100% 0%, transparent 80%, rgba(255, 255, 255, 0.02) 81%, transparent 82%),
-    linear-gradient(45deg, transparent 49.5%, rgba(255,255,255,0.02) 50%, transparent 50.5%),
-    linear-gradient(20deg, transparent 49.5%, rgba(255,255,255,0.02) 50%, transparent 50.5%),
-    linear-gradient(70deg, transparent 49.5%, rgba(255,255,255,0.02) 50%, transparent 50.5%);
-  background-size: 100% 100%;
-  background-position: top right;
-  opacity: 0.6;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.spider-web-svg {
+  width: 150vw;
+  height: 150vw;
+  max-width: none;
+  animation: rotate-web 240s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes rotate-web {
+  from { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.05); }
+  to { transform: rotate(360deg) scale(1); }
 }
 
 .hanging-spider-container {

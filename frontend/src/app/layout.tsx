@@ -4,6 +4,8 @@ import Sidebar from "@/components/profin/Sidebar";
 import MarketTicker from "@/components/profin/MarketTicker";
 import CommandPalette from "@/components/profin/CommandPalette";
 
+import SpiderWebBackground from "@/components/profin/SpiderWebBackground";
+
 export const metadata: Metadata = {
   title: "PROFIN WEB — Live Financial Intelligence",
   description: "Connect the signals. Understand the decision. A living financial intelligence platform powered by multi-agent AI.",
@@ -27,7 +29,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen antialiased" style={{ background: "var(--bg-deep)" }}>
         {/* Background Spider Web Pattern */}
-        <div className="spider-web-bg" />
+        <SpiderWebBackground />
 
         {/* Hanging Spider Animation */}
         <div className="hanging-spider-container">
